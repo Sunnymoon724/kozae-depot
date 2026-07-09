@@ -1,0 +1,21 @@
+# Console deploy targets. Copy to ConsoleTargets.list and edit.
+#
+# [ToolName]
+# @direct <alias>   — exe + runtime (incl. direct-only\) → Projects.list + ToolPaths.map
+# @common <alias>   — exe + runtime (no direct-only\) → shared Common Tool tree
+# @wrap <relPath>   — wrappers\ only → PROJECTS_ROOT\<relPath>\<toolFolder> (needs @direct/@common elsewhere)
+
+[ProtoGenerator]
+@direct <ConsoleAlias>
+
+[ProtoBuilder]
+@direct <ConsoleAlias>
+
+[ProtoExtractor]
+@direct <ConsoleAlias>
+
+[LuaConverter]
+@direct <ConsoleAlias>
+
+# @common <SharedAlias>
+# @wrap <Studio>\<Project>\Tool

@@ -3,12 +3,8 @@
 # Runtime tools must NOT read this file.
 
 # Helper dll target (BuildHelper)
-MainLab=KoZaeComplex\KoZaeLaboratory\KoZaeMainLab
+<HelperAlias>=<ProjectRoot>
 
 # Console tool copy roots (BuildConsole + ConsoleTargets.list)
 # Tool land under <alias>\<ToolPaths.map>
-KoZaeComplex=KoZaeComplex\KoZaeLaboratory
-
-BlackSheep=BlackSheepStudio\Common
-
-Rhythm=DEVit\Rhythm
+<ConsoleAlias>=<ProjectRoot>

@@ -1,0 +1,10 @@
+# toolName = relative path under each project (from Projects.list alias root)
+# Copy to ToolPaths.map and edit if your Tool folder layout differs.
+
+ProtoGenerator=Tool\GenerateProto
+ProtoBuilder=Tool\GenerateProto
+ProtoExtractor=Tool\GenerateProto
+
+LuaConverter=Tool\ConvertLua
+
+Helper=Assets\Plugins\KZHelper

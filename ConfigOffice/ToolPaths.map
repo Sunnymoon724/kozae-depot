@@ -1,9 +1,0 @@
-# toolName=relative path under each project
-
-ProtoGenerator=Tool\GenerateProto
-ProtoBuilder=Tool\GenerateProto
-ProtoExtractor=Tool\GenerateProto
-
-LuaConverter=Tool\ConvertLua
-
-Helper=Assets\KZLib\Plugins\KZHelper

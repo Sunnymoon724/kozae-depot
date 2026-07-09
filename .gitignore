@@ -1,6 +1,14 @@
 # BuildConsole temporary publish output
 ConsoleHall/KoZaeConsole/
 
+# Machine-local deploy config (copy from *.example)
+ConfigOffice/*
+!ConfigOffice/*.example
+
+# Machine-local SitePath seeds (copy alias.env.example → <alias>.env)
+ConsoleHall/Runtime/SitePath/*
+!ConsoleHall/Runtime/SitePath/*.example
+
 # OS
 Thumbs.db
 Desktop.ini
