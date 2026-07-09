@@ -1,0 +1,6 @@
+# Line order: GenerateProto param1-3, CopyProto param4-5 (source, dest)
+{PROJECTS_ROOT}\{PROTO_SOURCE_PATH}
+{PROJECTS_ROOT}\{WORK_PROJECT_PATH}\Assets\Plugins\KZLib
+{PROJECTS_ROOT}\{DATA_ROOT_PATH}\DataBase\{ENV_TAG}
+{PROJECTS_ROOT}\{DATA_ROOT_PATH}\DataBase\{ENV_TAG}
+{PROJECTS_ROOT}\{WORK_PROJECT_PATH}\Assets\Resources\Text\Proto

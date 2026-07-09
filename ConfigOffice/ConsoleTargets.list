@@ -1,0 +1,43 @@
+# Console deploy targets (BuildConsole.bat)
+# Aliases resolve via Projects.list / ToolPaths.map
+#
+# [ToolName]
+# @direct <alias>      : exe + runtime → project Tool folder (direct use)
+# @common <alias>      : exe + runtime → Common/Tool folder (shared)
+# @wrap   <relPath>    : wrapper scripts → derived project Tool folder
+
+[ProtoGenerator]
+@direct KoZaeComplex
+@direct Rhythm
+@common BlackSheep
+@wrap BlackSheepStudio\01_Active\Aquarius\Tool
+@wrap BlackSheepStudio\01_Active\Saturn\Tool
+@wrap BlackSheepStudio\01_Active\Taurus\Tool
+@wrap BlackSheepStudio\01_Active\Uranus\Tool
+
+[ProtoBuilder]
+@direct KoZaeComplex
+@direct Rhythm
+@common BlackSheep
+@wrap BlackSheepStudio\01_Active\Aquarius\Tool
+@wrap BlackSheepStudio\01_Active\Saturn\Tool
+@wrap BlackSheepStudio\01_Active\Taurus\Tool
+@wrap BlackSheepStudio\01_Active\Uranus\Tool
+
+[ProtoExtractor]
+@direct KoZaeComplex
+@direct Rhythm
+@common BlackSheep
+@wrap BlackSheepStudio\01_Active\Aquarius\Tool
+@wrap BlackSheepStudio\01_Active\Saturn\Tool
+@wrap BlackSheepStudio\01_Active\Taurus\Tool
+@wrap BlackSheepStudio\01_Active\Uranus\Tool
+
+[LuaConverter]
+@direct KoZaeComplex
+@direct Rhythm
+@common BlackSheep
+@wrap BlackSheepStudio\01_Active\Aquarius\Tool
+@wrap BlackSheepStudio\01_Active\Saturn\Tool
+@wrap BlackSheepStudio\01_Active\Taurus\Tool
+@wrap BlackSheepStudio\01_Active\Uranus\Tool

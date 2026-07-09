@@ -1,0 +1,14 @@
+# Deploy destinations only (build/copy).
+# alias = relative path under PROJECTS_ROOT
+# Runtime tools must NOT read this file.
+
+# Helper dll target (BuildHelper)
+MainLab=KoZaeComplex\KoZaeLaboratory\KoZaeMainLab
+
+# Console tool copy roots (BuildConsole + ConsoleTargets.list)
+# Tool land under <alias>\<ToolPaths.map>
+KoZaeComplex=KoZaeComplex\KoZaeLaboratory
+
+BlackSheep=BlackSheepStudio\Common
+
+Rhythm=DEVit\Rhythm
