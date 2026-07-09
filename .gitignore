@@ -1,9 +1,6 @@
 # BuildConsole temporary publish output
 ConsoleHall/KoZaeConsole/
 
-# Legacy / deployed secrets (no longer used by proto pipeline)
-**/Password.secret
-
 # OS
 Thumbs.db
 Desktop.ini
