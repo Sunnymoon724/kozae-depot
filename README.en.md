@@ -2,9 +2,12 @@
 
 [← Back to overview](README.md) · [한국어](README.ko.md)
 
-Build and deploy scripts for KoZae console tools (`KZProtoGenerator`, `KZLuaConverter`, etc.).
+Build and deploy packages for KoZae console tools.
 
-Uses [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) console executables built from the library repo.
+| Area | Source | Role |
+|------|--------|------|
+| ConsoleHall / HelperShed | [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) | C# console exes & Helper DLLs → game project `Tool/` |
+| Refinery | [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery) | Python Proto builder package → e.g. game project `Tool/ProtoBuilder` |
 
 ## Layout
 
@@ -15,8 +18,12 @@ KoZaeDepot/
 ├── ConsoleHall/
 │   ├── BuildConsole.bat  # Build Library console exes → copy to project Tool folders
 │   └── Runtime/          # Batch/PowerShell templates; SitePath/ for per-alias Paths.env seeds
-└── HelperShed/           # Helper build entry point
+├── HelperShed/           # Helper build entry point
+└── Refinery/             # Refinery (Python) tool publish — see Refinery README
+    └── ProtoBuilder/     # KZProtoBuilder build & generate package
 ```
+
+Refinery usage: [Refinery/README.en.md](Refinery/README.en.md)
 
 ## Setup (first time)
 
@@ -73,10 +80,21 @@ Do **not** commit `SitePath/*.env` (only `*.example`).
 
 ## Typical workflow
 
+**Library (C# consoles)**
+
 1. Change **KoZaeLibrary** → build/push library.
 2. Change **KoZaeDepot** batches or config → commit/push depot.
 3. Run `BuildLibrary.bat` and/or `ConsoleHall\BuildConsole.bat`.
 4. In each game project, run `Tool\GenerateProto\…` wrappers (e.g. `GenerateProto_DEV.bat`).
+
+**Refinery (Python ProtoBuilder)**
+
+1. Change **KoZaeRefinery/Proto** → push.
+2. Run `Refinery\BuildProtoBuilder.bat`.
+3. Copy the whole `ProtoBuilder\` folder into the game project (e.g. `Tool\ProtoBuilder\`).
+4. Set `Config.env` in the project and run `GenerateProto_DEV.bat` (etc.).
+
+Details: [Refinery/README.en.md](Refinery/README.en.md)
 
 ## Machine paths
 

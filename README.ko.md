@@ -2,9 +2,12 @@
 
 [← 개요로 돌아가기](README.md) · [English](README.en.md)
 
-[KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) 콘솔 도구(`KZProtoGenerator`, `KZLuaConverter` 등)를 빌드·배포하는 스크립트 모음입니다.
+KoZae 콘솔 도구를 빌드·배포하는 스크립트 모음입니다.
 
-라이브러리 repo에서 빌드한 콘솔 exe를 각 게임 프로젝트 `Tool/` 폴더로 복사하는 용도입니다.
+| 영역 | 소스 | 역할 |
+|------|------|------|
+| ConsoleHall / HelperShed | [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) | C# 콘솔 exe·Helper DLL → 게임 프로젝트 `Tool/` |
+| Refinery | [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery) | Python Proto 빌더 패키지 → 게임 프로젝트 `Tool/ProtoBuilder` 등으로 복사 |
 
 ## 구조
 
@@ -15,8 +18,12 @@ KoZaeDepot/
 ├── ConsoleHall/
 │   ├── BuildConsole.bat  # Library 콘솔 exe 빌드 → 프로젝트 Tool 폴더로 복사
 │   └── Runtime/          # 배치/PowerShell 템플릿; SitePath/는 alias별 Paths.env 시드
-└── HelperShed/           # Helper 빌드 진입점
+├── HelperShed/           # Helper 빌드 진입점
+└── Refinery/             # Refinery(Python) 도구 publish — 상세는 Refinery README
+    └── ProtoBuilder/     # KZProtoBuilder 빌드·생성 패키지
 ```
+
+Refinery 사용법: [Refinery/README.ko.md](Refinery/README.ko.md)
 
 ## 최초 설정
 
@@ -73,10 +80,21 @@ KoZaeDepot/
 
 ## 일반 워크플로
 
+**Library (C# 콘솔)**
+
 1. **KoZaeLibrary** 수정 → 빌드/push.
 2. **KoZaeDepot** 배치·설정 수정 → commit/push.
 3. `BuildLibrary.bat` 및/또는 `ConsoleHall\BuildConsole.bat` 실행.
 4. 각 게임 프로젝트에서 `Tool\GenerateProto\…` 래퍼 실행 (예: `GenerateProto_DEV.bat`).
+
+**Refinery (Python ProtoBuilder)**
+
+1. **KoZaeRefinery/Proto** 수정 → push.
+2. `Refinery\BuildProtoBuilder.bat` 실행.
+3. `ProtoBuilder\` 폴더를 게임 프로젝트 `Tool\ProtoBuilder\` 등으로 통째로 복사.
+4. 프로젝트에서 `Config.env` 설정 후 `GenerateProto_DEV.bat` 등 실행.
+
+상세: [Refinery/README.ko.md](Refinery/README.ko.md)
 
 ## 머신별 경로
 

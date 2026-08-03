@@ -1,6 +1,6 @@
 # KoZaeDepot
 
-> Build and deploy scripts that copy [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) console tools into game project `Tool/` folders.
+> Build and deploy packages for KoZae console tools — [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) and [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery).
 
 ## Documentation
 
