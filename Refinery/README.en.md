@@ -13,7 +13,6 @@ Refinery/
 ├── BuildProtoBuilder.bat        # build only (not deployed)
 └── ProtoBuilder/                # deploy this folder as a whole
     ├── KZProtoBuilder.exe       # built (not committed)
-    ├── flatc.exe                # copied (not committed)
     ├── Config.env.example
     ├── Config.env               # local only (not committed)
     ├── GenerateProto.bat
@@ -28,7 +27,7 @@ Refinery/
 BuildProtoBuilder.bat
 ```
 
-Builds `KZProtoBuilder.exe` from `KoZaeRefinery/Proto`, and places `flatc.exe` alongside it.
+Builds `KZProtoBuilder.exe` from `KoZaeRefinery/Proto` (MessagePack pipeline, templates embedded).
 
 ## Run
 
@@ -65,6 +64,8 @@ KZProtoBuilder.exe <protoFolder> <environment> <language>
 | `KEEP_CSV` | `1` keeps `ProtoOutput`; `0` deletes it after deploy |
 
 Requires .NET SDK for `csharp`, and CMake + MSVC (x64) for `cpp`. If `cmake` is not on PATH, the batch looks for Visual Studio CMake.
+
+For `cpp` consumers, only public `.h` + `KZProto.lib` are required. msgpack is not needed on the game include path; call `Load{Name}Proto` to read `.bytes`.
 
 ## Output
 

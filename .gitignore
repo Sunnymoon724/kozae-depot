@@ -3,7 +3,6 @@ ConsoleHall/KoZaeConsole/
 
 # Refinery ProtoBuilder binaries / local config / generated output
 Refinery/ProtoBuilder/KZProtoBuilder.exe
-Refinery/ProtoBuilder/flatc.exe
 Refinery/ProtoBuilder/Config.env
 Refinery/ProtoBuilder/ProtoOutput/
 Refinery/ProtoBuilder/ProtoProject/

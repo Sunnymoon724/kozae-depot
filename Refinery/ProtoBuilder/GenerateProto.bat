@@ -51,16 +51,6 @@ if "%PROTO_OUTPUT%"=="" (
   exit /b 1
 )
 
-for %%I in ("%BUILDER_EXE%") do set "BUILDER_DIR=%%~dpI"
-if not exist "%BUILDER_DIR%flatc.exe" if not exist "%PACKAGE_ROOT%flatc.exe" (
-  echo flatc.exe not found next to KZProtoBuilder.exe
-  if not defined SKIP_PAUSE pause
-  exit /b 1
-)
-if not exist "%BUILDER_DIR%flatc.exe" if exist "%PACKAGE_ROOT%flatc.exe" (
-  copy /Y "%PACKAGE_ROOT%flatc.exe" "%BUILDER_DIR%flatc.exe" >nul
-)
-
 set "ENV=%~1"
 if "%ENV%"=="" (
   echo Usage: GenerateProto.bat ENV

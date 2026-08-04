@@ -13,7 +13,6 @@ Refinery/
 ├── BuildProtoBuilder.bat        # 빌드용 (배포 안 함)
 └── ProtoBuilder/                # 통째로 배포하는 패키지
     ├── KZProtoBuilder.exe       # 빌드 산출 (커밋 안 함)
-    ├── flatc.exe                # 복사본 (커밋 안 함)
     ├── Config.env.example
     ├── Config.env               # 로컬 전용 (커밋 안 함)
     ├── GenerateProto.bat
@@ -28,7 +27,7 @@ Refinery/
 BuildProtoBuilder.bat
 ```
 
-`KoZaeRefinery/Proto` 소스로 `ProtoBuilder\KZProtoBuilder.exe`를 만들고, `flatc.exe`도 같이 둡니다.
+`KoZaeRefinery/Proto` 소스로 `ProtoBuilder\KZProtoBuilder.exe`를 만듭니다. (MessagePack 파이프라인, 템플릿 포함)
 
 ## 실행
 
@@ -66,6 +65,8 @@ KZProtoBuilder.exe <protoFolder> <environment> <language>
 
 `csharp`일 때 .NET SDK, `cpp`일 때 CMake + MSVC (x64)가 필요합니다. PATH에 `cmake`가 없으면 배치가 Visual Studio CMake를 찾습니다.
 
+`cpp` 소비 프로젝트는 공개 `.h` + `KZProto.lib`만 있으면 됩니다. msgpack은 게임 include에 필요 없고, `Load{Name}Proto`로 `.bytes`를 읽습니다.
+
 ## 출력
 
 생성 직후:
@@ -81,4 +82,4 @@ ProtoOutput/
 
 ## 게임 프로젝트로 배포
 
-`ProtoBuilder\` 폴더를 통째로 복사하면 됩니다. (`BuildProtoBuilder.bat`은 Depot에만 둠)
+`ProtoBuilder\` 폴더 전체를 복사합니다. (`BuildProtoBuilder.bat`은 Depot에 남김)
