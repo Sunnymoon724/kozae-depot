@@ -1,6 +1,8 @@
 # KoZaeDepot
 
-> Build and deploy packages for KoZae console tools — [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) and [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery).
+> Build and deploy packages for KoZae console tools — [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library).
+
+Proto / Refinery publish lives in [kozae-refinery](https://github.com/Sunnymoon724/kozae-refinery) (`Proto/Publish/`).
 
 ## Documentation
 

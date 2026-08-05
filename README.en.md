@@ -7,7 +7,8 @@ Build and deploy packages for KoZae console tools.
 | Area | Source | Role |
 |------|--------|------|
 | ConsoleHall / HelperShed | [KoZaeLibrary](https://github.com/Sunnymoon724/kozae-library) | C# console exes & Helper DLLs → game project `Tool/` |
-| Refinery | [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery) | Python Proto builder package → e.g. game project `Tool/ProtoBuilder` |
+
+Python Proto builder publish lives in [KoZaeRefinery](https://github.com/Sunnymoon724/kozae-refinery) `Proto/Publish/`.
 
 ## Layout
 
@@ -18,12 +19,8 @@ KoZaeDepot/
 ├── ConsoleHall/
 │   ├── BuildConsole.bat  # Build Library console exes → copy to project Tool folders
 │   └── Runtime/          # Batch/PowerShell templates; SitePath/ for per-alias Paths.env seeds
-├── HelperShed/           # Helper build entry point
-└── Refinery/             # Refinery (Python) tool publish — see Refinery README
-    └── ProtoBuilder/     # KZProtoBuilder build & generate package
+└── HelperShed/           # Helper build entry point
 ```
-
-Refinery usage: [Refinery/README.en.md](Refinery/README.en.md)
 
 ## Setup (first time)
 
@@ -89,12 +86,7 @@ Do **not** commit `SitePath/*.env` (only `*.example`).
 
 **Refinery (Python ProtoBuilder)**
 
-1. Change **KoZaeRefinery/Proto** → push.
-2. Run `Refinery\BuildProtoBuilder.bat`.
-3. Copy the whole `ProtoBuilder\` folder into the game project (e.g. `Tool\ProtoBuilder\`).
-4. Set `Config.env` in the project and run `GenerateProto_DEV.bat` (etc.).
-
-Details: [Refinery/README.en.md](Refinery/README.en.md)
+Build and ship from [KoZaeRefinery Proto/Publish](https://github.com/Sunnymoon724/kozae-refinery/tree/main/Proto/Publish).
 
 ## Machine paths
 

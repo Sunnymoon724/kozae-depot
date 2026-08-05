@@ -1,12 +1,6 @@
 # BuildConsole temporary publish output
 ConsoleHall/KoZaeConsole/
 
-# Refinery ProtoBuilder binaries / local config / generated output
-Refinery/ProtoBuilder/KZProtoBuilder.exe
-Refinery/ProtoBuilder/Config.env
-Refinery/ProtoBuilder/ProtoOutput/
-Refinery/ProtoBuilder/ProtoProject/
-
 # Machine-local deploy config (copy from *.example)
 ConfigOffice/*
 !ConfigOffice/*.example
